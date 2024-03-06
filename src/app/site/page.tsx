@@ -25,7 +25,7 @@ export default async function Home() {
             Plura
           </h1>
         </div>
-        <div className="flex justify-center items-center relative md:mt-[-70px]">
+        <div className="flex justify-center items-center relative">
           <Image
             src={'/assets/preview.png'}
             alt="preview banner img"
@@ -38,17 +38,17 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="flex justify-center items-center flex-col gap-4 mt-20">
+      <section className="flex justify-center items-center flex-col gap-4 
+      md:!mt-40 mt-[-40px]">
         <h2 className="text-4xl text-center">Chose waht fits you right</h2>
         <p className="text-muted-foreground text-center">
           Lorem ipsum dolor sit amet. Ut voluptatibus fuga <br /> et officiis
           obcaecati.
-
         </p>
         <div className="flex items-center justify-center gap-4 flex-wrap mt-6">
           {pricingCards.map((card) => (
             <Card key={card.title}
-              className={clsx('w-[300px] fle flex-col justify-between', {
+              className={clsx('w-[300px] flex flex-col justify-between', {
                 'border-2 border-primary': card.title === 'Unlimited Saas',
               })}
             >
